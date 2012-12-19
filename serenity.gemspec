@@ -1,14 +1,16 @@
-SPEC = Gem::Specification.new do |s|
-  s.name = "serenity-odt"
-  s.version = "0.2.2"
-  s.date = "2012-08-24"
-  s.author = "Jeff Coleman"
-  s.email = ""
-  s.homepage = "https://github.com/kremso/serenity"
-  s.platform = Gem::Platform::RUBY
-  s.summary = "Handles configuration options from Yaml files, returning multi-level values with appropriate error messaging."
-  s.files = Dir.glob("{lib}/**/*")
-  s.require_path = "lib"
-  s.has_rdoc = false
-  s.add_dependency("rspec", ">= 1.2.6")
+$:.push File.expand_path("../lib", __FILE__)
+
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "serenity"
+  s.version     = "0.2.3"
+  s.authors     = "Jeff Coleman"
+  s.email       = ""
+  s.homepage    = "https://github.com/kremso/serenity"
+  s.summary     = "Handles configuration options from Yaml files, returning multi-level values with appropriate error messaging."
+  s.description = "Easy work with Smev messages in Ruby."
+
+  s.files = Dir["{lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+
+  s.add_development_dependency "rspec"
 end
