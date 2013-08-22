@@ -63,18 +63,10 @@ module Serenity
     it 'should remove empty tags after a control structure processing' do
       template = <<-EOF
         <table:table style="Table_1">
-          <table:row style="Table_1_A1">
-            <table:cell style="Table_1_A1_cell">
-              {% for row in rows do %}
-            </table:cell>
-          </table:row>
-            <text:p text:style-name="Text_1_body">{%= row.name %}</text:p>
-            <text:p text:style-name="Text_1_body">{%= row.type %}</text:p>
-          <table:row style="Table_1_A1">
-            <table:cell style="Table_1_A1_cell">
-              {% end %}
-            </table:cell>
-          </table:row>
+          <table:row style="Table_1_A1"><table:cell style="Table_1_A1_cell">{% for row in rows do %}</table:cell></table:row>
+          <text:p text:style-name="Text_1_body">{%= row.name %}</text:p>
+          <text:p text:style-name="Text_1_body">{%= row.type %}</text:p>
+          <table:row style="Table_1_A1"><table:cell style="Table_1_A1_cell">{% end %}</table:cell></table:row>
         </table:table>
       EOF
 

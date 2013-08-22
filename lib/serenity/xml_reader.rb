@@ -12,7 +12,7 @@ module Serenity
         m = Regexp.last_match
         if m.begin(0) > last_match_pos
           text = @src[last_match_pos...m.begin(0)]
-          yield text, node_type(text) if text.gsub(/\s+/, '') != ''
+          yield text, node_type(text) if text != ''
         end
 
         last_match_pos = m.end(0)
