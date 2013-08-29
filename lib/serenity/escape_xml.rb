@@ -1,6 +1,9 @@
 class String
   def escape_xml
-    mgsub!([[/&/, '&amp;'], [/</, '&lt;'], [/>/, '&gt;']])
+    mgsub!([[/&/, '&amp;'], [/</, '&lt;'], [/>/, '&gt;'], [/'/,'&apos;']])
+  end
+  def unescape_xml
+    mgsub!([[/&amp;/, '&'], [/&lt;/, '<'], [/&gt;/, '>'], [/&apos;/, "'"]])
   end
 
   def convert_newlines

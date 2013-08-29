@@ -2,7 +2,6 @@ $:.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
 require 'rubygems'
 require 'serenity'
-require 'ruby-debug'
 require 'rspec'
 
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f}
