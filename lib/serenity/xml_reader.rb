@@ -23,7 +23,7 @@ module Serenity
               ptext=''
             end
           else
-            yield text.unescape_xml, node_type(text) if text != ''
+            yield text, node_type(text) if text != ''
           end
         end
         last_match_pos = m.end(0)
