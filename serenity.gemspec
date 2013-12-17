@@ -4,13 +4,13 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.name        = "serenity"
   s.version     = "0.2.3"
-  s.authors     = "Jeff Coleman"
+  s.authors     = "Theo Reichel fork of kremso"
   s.email       = ""
-  s.homepage    = "https://github.com/kremso/serenity"
-  s.summary     = "Handles configuration options from Yaml files, returning multi-level values with appropriate error messaging."
-  s.description = "Easy work with Smev messages in Ruby."
+  s.homepage    = "https://github.com/theoo/serenity"
+  s.summary     = "Parse ODT file and substitutes placeholders like ERb."
+  s.description = "kremso fork with community improvments."
 
-  s.files = Dir["{lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
 
   s.add_development_dependency "rspec"
   s.add_dependency "rubyzip", '~> 1.0'
