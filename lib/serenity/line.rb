@@ -50,7 +50,8 @@ module Serenity
 
   class StringLine < CodeLine
     def to_buf
-      " _buf << (" << escape_code(@text) << ").to_s.escape_xml.convert_newlines;"
+      code = "begin;#{@text};rescue Exception => e; e.inspect;end"
+      " _buf << (" << escape_code(code) << ").to_s.escape_xml.convert_newlines;"
     end
 
     def convert_newlines text
@@ -60,7 +61,8 @@ module Serenity
 
   class LiteralLine < CodeLine
     def to_buf
-      " _buf << (" << escape_code(@text) << ").to_s;"
+      code = "begin;#{@text};rescue Exception => e; e.inspect;end"
+      " _buf << (" << escape_code(code) << ").to_s;"
     end
   end
 
