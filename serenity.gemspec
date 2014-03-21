@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec"
   s.add_dependency "rubyzip", '~> 1.0'
+  s.add_dependency "nokogiri", '~> 1.0'
 end
