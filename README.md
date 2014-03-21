@@ -1,5 +1,11 @@
 Serenity is an embedded ruby for OpenOffice documents (.odt files). You provide an .odt template with ruby code inside a special markup and the data and Serenity generates the document. If you know erb all of this should sound familiar.
 
+Pure Images Support
+===================
+You must put a mock image in your odt template and give it a name. That name will be used to replace the mock image for the actual image. You can also assign any properties you want to the mock image and they will be kept once the image is replaced. Your Serenity Class then need to have @images instance variable, which need to look like this:
+
+@images = {"image_name_1" => '/path/to/the/real/image'}
+
 Important Changes
 =================
 
